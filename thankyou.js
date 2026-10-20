@@ -2,10 +2,9 @@
   const saveScoreBtn = document.getElementById('save-score-btn');
   let finalGameTime = 0;
 
-  // Initialize the end game modal
   EndGameModal.init();
 
-  // Get the game time from URL parameters or session storage
+  // Time arrives as ?time= or as sessionStorage set by the game page.
   const params = new URLSearchParams(window.location.search);
   const timeParam = params.get('time');
   
@@ -15,14 +14,12 @@
     finalGameTime = parseInt(sessionStorage.getItem('gameTime'));
   }
 
-  // Setup save score button
   saveScoreBtn.addEventListener('click', () => {
     EndGameModal.open(finalGameTime);
   });
 
-  // Setup modal callbacks
   EndGameModal.setOnCancel(() => {
-    // Just close the modal, stay on thank you screen
+    // Closing the modal stays on this page.
   });
 
   EndGameModal.setOnSubmit((team, timeMs) => {

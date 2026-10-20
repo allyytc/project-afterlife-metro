@@ -1,5 +1,5 @@
 
-extends Control   # or Node, depending on your scene root
+extends Control
 
 @export var next_scene_path: String = "res://Assets/Scenes/dialogue scenes + scripts/dialogue_2.tscn"
 

@@ -3,10 +3,8 @@
   const timerDisplay = document.getElementById('timer-display');
   const pauseBtn = document.getElementById('pause-btn');
 
-  // Initialize modules
   PauseMenu.init();
 
-  // Setup callbacks
   PauseMenu.setOnResume(() => {
     Timer.resume((ms) => {
       timerDisplay.textContent = Timer.formatTime(ms);
@@ -17,7 +15,7 @@
     window.location.href = 'homescreen.html';
   });
 
-  // Handle fade overlay end -> enable play and start timer
+  // The overlay fades out, then the run timer starts.
   overlay.addEventListener('animationend', () => {
     overlay.remove();
     Timer.start((ms) => {
@@ -25,7 +23,6 @@
     });
   });
 
-  // Button event listeners
   pauseBtn.addEventListener('click', () => {
     if (!PauseMenu.isPausedState()) {
       Timer.pause();
@@ -33,7 +30,7 @@
     }
   });
 
-  // Safety: prevent overlay from blocking if animation doesn't fire
+  // If the fade animation never fires, drop the overlay so it cannot block input.
   window.addEventListener('load', () => {
     setTimeout(() => {
       if (overlay.isConnected) {
@@ -45,7 +42,7 @@
     }, 3500);
   });
 
-  // Listen for game completion signal from Godot
+  // end_of_game_area.gd posts { type: 'gameCompleted' } to this page.
   window.addEventListener('message', (event) => {
     if (event.data && event.data.type === 'gameCompleted') {
       const finalTime = Timer.pause();
@@ -59,17 +56,15 @@
             if (res.ok) { window.location.href = url; return; }
           } catch (e) {}
         }
-        // fallback
         window.location.href = candidates[0];
       })();
     }
   });
 
-  // Alternative: Listen for postMessage from iframe
+  // portal.gd calls window.parent.completeGame() instead of postMessage.
   const gameFrame = document.getElementById('game-frame');
   if (gameFrame) {
     gameFrame.addEventListener('load', () => {
-      // Expose function that Godot can call via window.parent
       window.completeGame = () => {
         const finalTime = Timer.pause();
         sessionStorage.setItem('gameTime', finalTime);

@@ -1,4 +1,3 @@
-// Timer module
 const Timer = (() => {
   let startTime = null;
   let elapsedBeforePause = 0;

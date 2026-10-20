@@ -1,4 +1,3 @@
-// Pause menu module
 const PauseMenu = (() => {
   const pauseMenuBackdrop = document.getElementById('pause-menu-backdrop');
   const resumeBtn = document.getElementById('resume-btn');

@@ -1,4 +1,3 @@
-// End game modal module
 const EndGameModal = (() => {
   const modalBackdrop = document.getElementById('modal-backdrop');
   const finalTimeLabel = document.getElementById('final-time');
