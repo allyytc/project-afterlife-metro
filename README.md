@@ -12,6 +12,50 @@ Two people share one keyboard. The human uses WASD. The ghost uses the arrow key
 
 The run opens on three short pages about Hugh, who died in the station, and Violet, the ghost who stayed. Then the station: three boxes, three pressure plates, and a portal those plates open and close; a key only the human can pick up; and a door that opens once they have it. The end area pauses the game and tells the page the run is over. Stepping into the portal sends the page a completion call of its own. The page keeps the time so a team can save it.
 
+## Screenshots
+
+Captured from the local site (`npm start`, then `homescreen.html`) at 1440×900.
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/07-game-split-screen-human-ghost.png" alt="Split screen with the human view on the left and the ghost view on the right" width="100%">
+      <br>Split screen. Human view on the left, ghost view on the right.
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/08-game-exploring-puzzle-room.png" alt="Puzzle room. The ghost view shows a floor tile and a box that are not on the human view." width="100%">
+      <br>Puzzle room. The ghost view shows a tile and a box the human view does not.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/01-home.png" alt="Afterlife Metro home screen with Start Game, Leaderboard, and Instructions" width="100%">
+      <br>Home screen.
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/06-game-story-dialogue.png" alt="Story page about Hugh remembering the fall in the station" width="100%">
+      <br>Story page. Hugh remembers the fall that left him in the station.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/04-leaderboard.png" alt="Leaderboard of the times stored in scores.json" width="100%">
+      <br>Leaderboard of the times stored in scores.json.
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/02-instructions.png" alt="Instructions: arrow keys for the ghost, WASD for the human" width="100%">
+      <br>Instructions. Arrow keys for the ghost, WASD for the human.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/09-game-pause-menu.png" alt="Pause menu with Resume and Quit to Home over the split screen" width="100%">
+      <br>Pause menu over the split screen.
+    </td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
 ## Features
 
 - Split-screen local co-op on one station, with separate canvas layers for the human view and the ghost view
