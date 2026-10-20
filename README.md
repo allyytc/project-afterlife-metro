@@ -104,6 +104,5 @@ Draft roles, inferred from commit history and not yet confirmed.
 | Ally Chen | web UI, leaderboard API, Godot web export, level scenes |
 | Simarjeet Kaur | web UI, Godot prototype, game concept |
 | Newton Babphavong | Godot gameplay, character animation, level art, web export |
+| Nour Alzahraa Alqattan | game art |
 | doornoir | game concept |
-
-The Hall of Fame page names Nour Alzahraa Alqattan. This repository has no commits under that name, so no role is listed.
